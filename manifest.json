@@ -1,0 +1,48 @@
+{
+  "name": "Chrome Practice",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A chrome extension for Rails site",
+  "icons": {
+    "16": "icons/ninja-small.png",
+    "48": "icons/ninja-small.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts":
+    [
+      "browser_action.js"
+      // ,
+      // "js/jquery/jquery.min.js"
+    ],
+    "persistent": true
+  },
+  // "content_scripts": [
+  //   {
+  //     "matches": ["http://*/*","https://*/*"],
+  //     "js": ["js/jquery/jquery.min.js", "src/bg/content_script.js"]
+  //   }
+  // ],
+  // "options_page": "src/options_custom/settings.html",
+  "browser_action": {
+    "default_icon": "icons/ninja-small.png",
+    "default_title": "Thanks Kenn",
+    "default_popup": "browser.html"
+  },
+  "permissions":
+  [
+    "tabs",
+    "background",
+    "storage",
+    "contentSettings",
+    "notifications"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K"
+      },
+      "description": "Put thing on screen"
+    }
+  }
+}
